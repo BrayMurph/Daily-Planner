@@ -79,25 +79,24 @@ var myDay = [
     
 ]
 
-// gets data for the header date
+
 function getHeaderDate() {
     var currentHeaderDate = moment().format('dddd, MMMM Do');
     $("#currentDay").text(currentHeaderDate);
 }
 
-// saves data to localStorage
 function saveReminders() {
     localStorage.setItem("myDay", JSON.stringify(myDay));
 }
 
-// sets any data in localStorage to the view
+
 function displayReminders() {
     myDay.forEach(function (_thisHour) {
         $(`#${_thisHour.id}`).val(_thisHour.reminder);
     })
 }
 
-// sets any existing localStorage data to the view if it exists
+
 function init() {
     var storedDay = JSON.parse(localStorage.getItem("myDay"));
 
@@ -109,10 +108,9 @@ function init() {
     displayReminders();
 }
 
-// loads header date
+
 getHeaderDate();
 
-// creates the visuals for the scheduler body
 myDay.forEach(function(thisHour) {
     // creates timeblocks row
     var hourRow = $("<form>").attr({
@@ -159,11 +157,10 @@ myDay.forEach(function(thisHour) {
     hourRow.append(hourField, hourPlan, savePlan);
 })
 
-// loads any existing localstorage data after components created
+
 init();
 
 
-// saves data to be used in localStorage
 $(".saveBtn").on("click", function(event) {
     event.preventDefault();
     var saveIndex = $(this).siblings(".description").children(".future").attr("id");
