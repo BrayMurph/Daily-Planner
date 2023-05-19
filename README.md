@@ -2,6 +2,8 @@
 
 ## Description
 
+This was to create a faily planner in a normal schedule of business hours. The objective was for the past hour to be red to show that it has past and for the grayed out to show that it is way over with. The green is to show that this is the current and future events that are to happen each remaining hour of the day. There is also the displayed date and it is synced with the normal calender as well as the clock is synced as well.
+
 ## Acceptance Criteria of Assignment
 
 ```md
@@ -22,4 +24,8 @@ THEN the saved events persist
 
 ## Photo of Website
 
+![Daily-Planner](./assets/images/111111.JPG)
+
 ## Link to Website
+
+[Link to Website]()

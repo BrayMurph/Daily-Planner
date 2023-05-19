@@ -62,20 +62,6 @@ var myDay = [
         meridiem: "pm",
         reminder: ""
     },
-    {
-        id: "9",
-        hour: "6",
-        time: "18",
-        meridiem: "pm",
-        reminder: ""
-    },
-    {
-        id: "10",
-        hour: "7",
-        time: "19",
-        meridiem: "pm",
-        reminder: ""
-    },
     
 ]
 
@@ -135,8 +121,9 @@ myDay.forEach(function(thisHour) {
     planData.attr("id", thisHour.id);
     if (thisHour.time < moment().format("HH")) {
         planData.attr ({
-            "class": "past", 
+            "class": "past"
         })
+
     } else if (thisHour.time === moment().format("HH")) {
         planData.attr({
             "class": "present"
@@ -155,7 +142,7 @@ myDay.forEach(function(thisHour) {
     });
     savePlan.append(saveButton);
     hourRow.append(hourField, hourPlan, savePlan);
-})
+});
 
 
 init();
